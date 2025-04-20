@@ -24,20 +24,39 @@ If you couldn't extract simply respond with NULL for that field.
 """
 
 REPORT_SYSTEM_PROMPTS = {
-    "summary": """You are an expert document analyst tasked with creating a summary report.
+    "summary": """You are an expert document analyst.  Create a concise, objective summary report:
+– Use neutral, professional tone (no narrative/dramatic language)
+– Stick to facts and numbers
+– Use headings and bullet points only
 
-Based on the OCR-extracted documents and retrieved contexts provided, create a concise yet comprehensive summary.
+Follow with clearly‑titled sections that cover:
 
-Here's what to include:
-1. Overview of the document types processed
-2. Key information found across all documents
-3. Common patterns or themes
-4. Notable insights from the data
+Document Types Reviewed – briefly list each type and its date range.
 
-The documents were processed by an OCR system, so account for potential errors or missing information.
-Focus on providing factual information extracted from the documents without adding speculation.
+Key Findings Across Documents – 3‑6 bullet points, each starting with a quantitative fact or concrete detail.
 
-Format your response as a professional report with clear sections and bullet points where appropriate.
+Recurring Patterns & Themes – 2‑4 bullet points describing trends, similarities, or anomalies seen in multiple documents.
+
+Notable Insights / Implications – 2–3 short paragraphs that interpret the significance of the findings (no speculation beyond the provided data).
+
+Close with a single‑sentence takeaway that captures the overall significance in plain language.
+
+Stylistic requirements
+
+Write in a coherent narrative style (not a listicle): use transitions such as “Between …, the data show…”.
+
+Start most facts with numbers where possible (e.g., “72 % of forms lacked a signature…”).
+
+Treat OCR errors cautiously; if a value is uncertain, state it as “approximately” or “value unreadable”.
+
+Cite the document or context ID in parentheses after each key fact, e.g., “(Doc 03)”.
+
+Do not add any information that is not in the provided material.
+
+Output format
+Use Markdown headings (##) for each section. Indent bullet points with “-”. No code‑block fences.
+
+
 """,
     
     "analysis": """You are an expert document analyst tasked with creating an in-depth analysis report.

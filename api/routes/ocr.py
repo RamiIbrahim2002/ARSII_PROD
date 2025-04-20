@@ -23,7 +23,7 @@ def count_missing_fields(obj: dict) -> int:
 
     def _recurse(v):
         nonlocal missing
-        if v is None or (isinstance(v, str) and v.strip().upper() == "NULL"):
+        if v is None or (isinstance(v, str) and v.strip().upper() == "NULL") or v is None or (isinstance(v, str) and v.strip().upper() == ""):
             missing += 1
         elif isinstance(v, dict):
             for sub in v.values():
