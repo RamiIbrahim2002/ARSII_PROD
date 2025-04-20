@@ -1,0 +1,23 @@
+# Use a slim, up‑to‑date Python base image
+FROM python:3.10-slim
+
+# Set a consistent work directory
+WORKDIR /app
+
+# Install any OS‑level dependencies here (if you need gcc, libpq-dev, etc.)
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     gcc libpq-dev \
+# && rm -rf /var/lib/apt/lists/*
+
+# Copy & install Python deps
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of your app’s code
+COPY . .
+
+# Expose the port FastAPI will listen on
+EXPOSE 8000
+
+# Default command to run your FastAPI app
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
