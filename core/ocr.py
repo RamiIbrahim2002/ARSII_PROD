@@ -87,3 +87,29 @@ class OcrProcessor:
     
         logger.info(f"Claim evaluation result: {evaluation}")
         return evaluation
+
+
+    async def generate_report(self, docs: list[dict]) -> str:
+        """
+        Runs a RAG-based summary/report over a list of extracted form documents.
+        """
+        try:
+            # Prepare RAG input: embed or chunk as needed
+            # For simplicity, send full list as JSON
+            body = json.dumps(docs, ensure_ascii=False)
+            resp = self.client.responses.create(
+                model="gpt-4o-2024-08-06",
+                input=[
+                    {"role": "system",  "content": REPORT_SYSTEM_PROMPT},
+                    {"role": "user",    "content": body}
+                ],
+                text={
+                    "format": {"type": "text"}
+                }
+            )
+        except Exception as e:
+            logger.error(f"Report generation failed: {e}")
+            raise HTTPException(status_code=500, detail="Report service error.")
+
+        # The model returns a plain text report
+        return resp.output_text
