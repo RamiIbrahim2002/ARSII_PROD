@@ -80,10 +80,7 @@ async def extract(
     evaluation = await ocr_processor.evaluate_claim(eval_payload)
     logger.info(f"Evaluation result ya oyssef: {evaluation}")
     # 7) Return result
-    return {
-        **ocr_record.dict(),
-        "evaluation": evaluation
-    }
+    return evaluation
 
 @router.get("/report", response_model=dict)
 async def generate_report(
