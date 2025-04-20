@@ -78,7 +78,7 @@ async def extract(
 
     # 6) Call the evaluator
     evaluation = await ocr_processor.evaluate_claim(eval_payload)
-
+    logger.info(f"Evaluation result ya oyssef: {evaluation}")
     # 7) Return result
     return {
         **ocr_record.dict(),
