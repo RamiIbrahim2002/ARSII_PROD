@@ -78,3 +78,310 @@
 2025-04-20 05:25:41,096 - ocr_app - INFO - Logged to database with ID 28
 2025-04-20 05:25:45,544 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
 2025-04-20 05:25:45,550 - ocr_app - INFO - Claim evaluation result: {'form_data': {'document_type': 'Bulletin de remboursement des frais de soins', 'metadata': {'identifiant_unique': '4538384807', 'regime': ['CNSS']}, 'assure_social': {'nom': 'Ben Hammouda', 'prenom': 'Hela', 'adresse': {'ligne_1': 'Av. Taieb Sfar', 'ligne_2': 'Mahdia', 'code_postal': '5100'}}, 'Le_malade': {'type_relation': 'assure_social', 'prenom': 'Mêïem', 'nom': 'Mêïem', 'date_naissance': '01-07-1968', 'telephone': '27722150', 'signature': 'X'}}, 'purchase': {'code_acte': 'MED045', 'quantite': 2, 'montant_total': 80}, 'tariff': {'description': 'Amoxicilline 500\xa0mg', 'rate': 0.85, 'ceiling_category': 'drugs'}, 'provider_valid': {'answer': True, 'reason': 'The provider is conventionné under the CNSS regime.'}, 'codes_on_list': {'answer': True, 'reason': "The code MED045 is on the CNAM's approved list for medications."}, 'dosage_matches': {'answer': True, 'reason': 'The quantity of 2 matches the prescribed amount.'}, 'line_item_reimbursements': [{'code': 'MED045', 'rate': 0.85, 'amount': 68.0}], 'annual_ceiling_ok': {'answer': True, 'reason': 'The total amount of 80.0 does not exceed annual ceilings.'}, 'anomaly_flag': {'answer': False, 'reason': 'No statistical anomalies detected in the claim.'}, 'final_decision': {'decision': 'approve', 'amount': 68.0}}
+2025-04-20 06:37:59,691 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:37:59,696 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:38:01,874 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:38:01,874 - ocr_app - INFO - Connected to database
+2025-04-20 06:42:45,652 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:42:45,653 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:42:48,194 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:42:48,195 - ocr_app - INFO - Connected to database
+2025-04-20 06:51:25,096 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:51:25,099 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:54:53,432 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:54:53,436 - ocr_app - INFO - Connected to database
+2025-04-20 06:55:03,963 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 06:55:04,023 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 06:55:04,136 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 06:56:51,033 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:56:51,034 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:56:57,334 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:56:57,335 - ocr_app - INFO - Connected to database
+2025-04-20 06:57:10,474 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:57:10,474 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:57:18,776 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:57:18,776 - ocr_app - INFO - Connected to database
+2025-04-20 06:57:19,721 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 06:57:19,783 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 06:57:19,858 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 06:57:20,197 - ocr_app - ERROR - DB query error: 1 validation error for OcrLogRead
+extracted_data
+  Input should be a valid dictionary [type=dict_type, input_value='{"metadata": {"regime": ...nt des frais de soins"}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+2025-04-20 06:58:20,204 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:58:20,205 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:58:23,855 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:58:23,856 - ocr_app - INFO - Connected to database
+2025-04-20 06:58:23,912 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 06:58:23,964 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 06:58:24,039 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 06:59:16,133 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:59:16,133 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:59:18,522 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:59:18,523 - ocr_app - INFO - Connected to database
+2025-04-20 06:59:37,120 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:59:37,120 - ocr_app - INFO - Disconnected from database
+2025-04-20 06:59:39,588 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 06:59:39,589 - ocr_app - INFO - Connected to database
+2025-04-20 06:59:40,474 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 06:59:40,524 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 06:59:40,603 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 06:59:41,034 - ocr_app - ERROR - Error in RAG report generation: Expected metadata value to be a str, int, float or bool, got 2025-04-20 05:26:58.177742+00:00 which is a datetime in add.
+2025-04-20 07:00:48,612 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:00:48,612 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:00:51,096 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:00:51,096 - ocr_app - INFO - Connected to database
+2025-04-20 07:00:51,370 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:00:51,419 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:00:51,493 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:00:56,918 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:00:56,920 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:21:02,957 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:21:02,958 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:22:05,784 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:22:05,785 - ocr_app - INFO - Connected to database
+2025-04-20 07:22:10,494 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:22:10,560 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:22:10,645 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:22:23,784 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:22:23,787 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:22:45,610 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:22:45,610 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:22:48,995 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:22:48,995 - ocr_app - INFO - Connected to database
+2025-04-20 07:22:49,053 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:22:49,114 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:22:49,187 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:23:01,776 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:23:01,778 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:24:30,451 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:24:30,454 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:24:32,791 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:24:32,791 - ocr_app - INFO - Connected to database
+2025-04-20 07:24:37,760 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:24:37,819 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:24:37,901 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:24:44,581 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:24:44,581 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:24:46,882 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:24:46,882 - ocr_app - INFO - Connected to database
+2025-04-20 07:24:46,918 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:24:46,978 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:24:47,057 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:24:54,146 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:24:54,149 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:27:52,266 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:27:52,269 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:29:25,390 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:29:25,391 - ocr_app - INFO - Connected to database
+2025-04-20 07:29:25,462 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:29:25,522 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:29:25,597 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:29:41,010 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:29:41,012 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:29:45,783 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:29:45,803 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:29:59,874 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:29:59,877 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:29:59,921 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:29:59,941 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:30:13,398 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:30:13,399 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:30:50,692 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:30:50,693 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:30:53,331 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:30:53,331 - ocr_app - INFO - Connected to database
+2025-04-20 07:30:56,096 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:30:56,147 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:30:56,226 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:31:04,489 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:31:04,492 - ocr_app - ERROR - Error in RAG report generation: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:32:31,758 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:32:31,758 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:32:34,859 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:32:34,859 - ocr_app - INFO - Connected to database
+2025-04-20 07:32:37,206 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:32:37,299 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:32:37,373 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:32:37,728 - ocr_app - INFO - [RAG] chunk #0 type=<class 'str'> len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:32:37,728 - ocr_app - INFO - [RAG] chunk #1 type=<class 'str'> len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:32:37,728 - ocr_app - INFO - [RAG] chunk #2 type=<class 'str'> len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:32:37,728 - ocr_app - INFO - [RAG] chunk #3 type=<class 'str'> len=198 snippet='al": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher'
+2025-04-20 07:32:37,728 - ocr_app - INFO - [RAG] chunk #4 type=<class 'str'> len=197 snippet='l": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher '
+2025-04-20 07:32:47,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:32:47,507 - ocr_app - ERROR - [RAG] temp_col.add failed: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}} in add.
+2025-04-20 07:35:24,706 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:35:24,707 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:35:27,095 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:35:27,095 - ocr_app - INFO - Connected to database
+2025-04-20 07:35:35,921 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:35:35,972 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:35:36,047 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:35:36,388 - ocr_app - INFO - [RAG] chunk #0: type=<class 'str'> len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:35:36,388 - ocr_app - INFO - [RAG] chunk #1: type=<class 'str'> len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:35:36,388 - ocr_app - INFO - [RAG] chunk #2: type=<class 'str'> len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:35:36,388 - ocr_app - ERROR - [RAG] embeddings.create failed: 'OcrProcessor' object has no attribute 'embed_model'
+2025-04-20 07:36:19,729 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:36:19,729 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:36:22,761 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:36:22,762 - ocr_app - INFO - Connected to database
+2025-04-20 07:36:22,807 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:36:22,872 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:36:22,944 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:36:23,323 - ocr_app - INFO - [RAG] chunk #0: type=<class 'str'> len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:36:23,323 - ocr_app - INFO - [RAG] chunk #1: type=<class 'str'> len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:36:23,323 - ocr_app - INFO - [RAG] chunk #2: type=<class 'str'> len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:36:33,278 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:36:33,279 - ocr_app - ERROR - [RAG] embeddings.create failed: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:36:42,445 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:36:42,445 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:37:47,215 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:37:47,215 - ocr_app - INFO - Connected to database
+2025-04-20 07:37:47,574 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:37:47,624 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:37:47,699 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:37:48,095 - ocr_app - INFO - [RAG] sanitized inputs sample: ['{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mélec", "prenom": "Mélec", "signature": "", "telephone": "27722150", "type_relation": "enfant", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mêïem", "prenom": "Mêïem", "signature": "X", "telephone": "27722150", "type_relation": "assure_social", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taieb Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Meịẹe", "prenom": "Meịẹe", "signature": "X", "telephone": "27722150", "type_relation": "conjoint", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}']
+2025-04-20 07:37:49,604 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:37:49,608 - ocr_app - ERROR - [RAG] test embed failed: object CreateEmbeddingResponse can't be used in 'await' expression
+2025-04-20 07:38:20,403 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:38:20,404 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:38:22,741 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:38:22,741 - ocr_app - INFO - Connected to database
+2025-04-20 07:38:22,775 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:38:22,824 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:38:22,895 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:38:23,333 - ocr_app - INFO - [RAG] sanitized inputs sample: ['{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mélec", "prenom": "Mélec", "signature": "", "telephone": "27722150", "type_relation": "enfant", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mêïem", "prenom": "Mêïem", "signature": "X", "telephone": "27722150", "type_relation": "assure_social", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taieb Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Meịẹe", "prenom": "Meịẹe", "signature": "X", "telephone": "27722150", "type_relation": "conjoint", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}']
+2025-04-20 07:38:24,043 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:38:24,048 - ocr_app - INFO - [RAG] test embed OK, got 1 vector(s)
+2025-04-20 07:38:24,058 - ocr_app - INFO - [RAG] chunk #0: len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:38:24,058 - ocr_app - INFO - [RAG] chunk #1: len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:38:24,058 - ocr_app - INFO - [RAG] chunk #2: len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:38:27,368 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:38:27,371 - ocr_app - ERROR - [RAG] embeddings.create failed: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:39:23,583 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:39:23,586 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:39:26,608 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:39:26,608 - ocr_app - INFO - Connected to database
+2025-04-20 07:39:31,374 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:39:31,424 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:39:31,496 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:39:31,835 - ocr_app - INFO - [RAG] sanitized inputs sample: ['{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mélec", "prenom": "Mélec", "signature": "", "telephone": "27722150", "type_relation": "enfant", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mêïem", "prenom": "Mêïem", "signature": "X", "telephone": "27722150", "type_relation": "assure_social", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taieb Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Meịẹe", "prenom": "Meịẹe", "signature": "X", "telephone": "27722150", "type_relation": "conjoint", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}']
+2025-04-20 07:39:32,479 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:39:32,483 - ocr_app - INFO - [RAG] test embed OK, got 1 vector(s)
+2025-04-20 07:39:32,494 - ocr_app - INFO - [RAG] chunk #0: len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:39:32,495 - ocr_app - INFO - [RAG] chunk #1: len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:39:32,495 - ocr_app - INFO - [RAG] chunk #2: len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:39:37,532 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:39:37,534 - ocr_app - ERROR - [RAG] embeddings.create failed: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:42:41,032 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:42:41,032 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:42:52,667 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:42:52,669 - ocr_app - INFO - Connected to database
+2025-04-20 07:42:58,815 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:42:58,815 - ocr_app - INFO - Connected to database
+2025-04-20 07:43:35,696 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:43:35,696 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:43:38,353 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:43:38,354 - ocr_app - INFO - Connected to database
+2025-04-20 07:45:39,134 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:45:39,135 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:45:41,785 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:45:41,785 - ocr_app - INFO - Connected to database
+2025-04-20 07:45:48,999 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:45:49,063 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:45:49,149 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:45:49,539 - ocr_app - INFO - [RAG] sanitized inputs sample: ['{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mélec", "prenom": "Mélec", "signature": "", "telephone": "27722150", "type_relation": "enfant", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Mêïem", "prenom": "Mêïem", "signature": "X", "telephone": "27722150", "type_relation": "assure_social", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taieb Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}', '{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malade": {"nom": "Meịẹe", "prenom": "Meịẹe", "signature": "X", "telephone": "27722150", "type_relation": "conjoint", "date_naissance": "01-07-1968"}, "assure_social": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Taher Sfar", "ligne_2": "Mahdia", "code_postal": "5100"}}, "document_type": "Bulletin de remboursement des frais de soins"}']
+2025-04-20 07:45:50,207 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:45:50,208 - ocr_app - INFO - [RAG] test embed OK, got 1 vector(s)
+2025-04-20 07:45:50,215 - ocr_app - INFO - [RAG] chunk #0: len=432 snippet='{"metadata": {"regime": ["CNSS"], "identifiant_unique": "4538384807"}, "Le_malad'
+2025-04-20 07:45:50,215 - ocr_app - INFO - [RAG] chunk #1: len=200 snippet='cial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tah'
+2025-04-20 07:45:50,215 - ocr_app - INFO - [RAG] chunk #2: len=199 snippet='ial": {"nom": "Ben Hammouda", "prenom": "Hela", "adresse": {"ligne_1": "Av. Tahe'
+2025-04-20 07:46:01,056 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-04-20 07:46:01,058 - ocr_app - ERROR - [RAG] embeddings.create failed: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:48:51,086 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:48:51,086 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:48:55,198 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:48:55,199 - ocr_app - INFO - Connected to database
+2025-04-20 07:48:55,260 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:48:55,322 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:48:55,393 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:48:55,718 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:48:56,324 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 403 Forbidden"
+2025-04-20 07:48:56,325 - ocr_app - ERROR - [RAG] full_text embedding failed: Error code: 403 - {'error': {'message': 'Project `proj_0VhBk8mgXd0ZIzWBwsS3ao4F` does not have access to model `gpt-4o-2024-08-06`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-04-20 07:53:03,522 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:53:03,523 - ocr_app - INFO - Connected to database
+2025-04-20 07:53:08,818 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:53:08,882 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:53:08,987 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:53:09,297 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:53:09,878 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 403 Forbidden"
+2025-04-20 07:53:09,882 - ocr_app - ERROR - [RAG] full_text embedding failed: Error code: 403 - {'error': {'message': 'Project `proj_0VhBk8mgXd0ZIzWBwsS3ao4F` does not have access to model `gpt-4o-2024-08-06`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-04-20 07:53:58,986 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:53:58,986 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:54:01,547 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:54:01,548 - ocr_app - INFO - Connected to database
+2025-04-20 07:54:03,174 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:54:03,230 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:54:03,308 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:54:03,633 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:54:04,262 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 403 Forbidden"
+2025-04-20 07:54:04,264 - ocr_app - ERROR - [RAG] full_text embedding failed: Error code: 403 - {'error': {'message': 'You are not allowed to generate embeddings from this model', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:55:16,807 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:55:16,807 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:55:19,264 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:55:19,264 - ocr_app - INFO - Connected to database
+2025-04-20 07:55:19,316 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:55:19,371 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:55:19,447 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:55:19,851 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:55:20,926 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 403 Forbidden"
+2025-04-20 07:55:20,930 - ocr_app - ERROR - [RAG] full_text embedding failed: Error code: 403 - {'error': {'message': 'You are not allowed to generate embeddings from this model', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-04-20 07:56:29,166 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:56:29,166 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:56:31,437 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:56:31,437 - ocr_app - INFO - Connected to database
+2025-04-20 07:56:31,482 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:56:31,543 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:56:31,623 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:56:32,059 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:56:33,016 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:56:33,021 - ocr_app - INFO - [RAG] full_text embed OK, vector length=1536
+2025-04-20 07:57:25,999 - databases - INFO - Disconnected from database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:57:25,999 - ocr_app - INFO - Disconnected from database
+2025-04-20 07:57:28,290 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 07:57:28,291 - ocr_app - INFO - Connected to database
+2025-04-20 07:57:30,850 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:57:30,901 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-20 07:57:30,980 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:57:31,377 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:57:32,305 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:57:32,309 - ocr_app - INFO - [RAG] full_text embed OK, vector length=1536
+2025-04-20 07:57:32,815 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:57:33,222 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:57:33,578 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:57:36,483 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:57:43,362 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-20 07:59:21,185 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:59:21,206 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:59:21,385 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:59:22,531 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:22,534 - ocr_app - INFO - [RAG] full_text embed OK, vector length=1536
+2025-04-20 07:59:23,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:24,122 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:24,534 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:29,139 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:29,531 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:40,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-20 07:59:40,363 - ocr_app - INFO - Loaded blank template from /home/rami_ibrahim/Documents/ARSII/static/blank_cnam_form.png
+2025-04-20 07:59:40,383 - ocr_app - INFO - ChromaDB initialized successfully for OCR RAG
+2025-04-20 07:59:40,592 - ocr_app - INFO - [RAG] concatenated full_text length=12695
+2025-04-20 07:59:41,224 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:41,229 - ocr_app - INFO - [RAG] full_text embed OK, vector length=1536
+2025-04-20 07:59:41,736 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:42,451 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:42,964 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:43,521 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:44,397 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-20 07:59:53,102 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-20 08:19:54,312 - databases - INFO - Connected to database postgres://avnadmin:********@pg-it-impact-youssefbena87-ceeb.f.aivencloud.com:18083/defaultdb?sslmode=require
+2025-04-20 08:19:54,315 - ocr_app - INFO - Connected to database

@@ -1,3 +1,4 @@
 .env
 ocr-env
 __pycache__
+data/
