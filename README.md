@@ -1,6 +1,4 @@
-# ARSII
-
-![Project Diagram](static/diag.png)
+# Seha backend
 
 A FastAPI application for extracting data from CNAM reimbursement forms using OpenAI’s OCR and JSON-schema-driven pipeline, storing results in a database, and generating summary or analytical reports via retrieval-augmented generation (RAG).
 
