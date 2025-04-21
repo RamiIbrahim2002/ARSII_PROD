@@ -203,8 +203,3 @@ docker run -e OPENAI_API_KEY=... -e DATABASE_URL=... -p 8000:8000 arsi-prod
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-
-## License
-
-_No license specified._
-
